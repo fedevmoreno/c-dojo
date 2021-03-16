@@ -1,13 +1,3 @@
-#include <unistd.h>
-
-int	main(int argc, const char **argv)
-{
-
-
-
-
-}
-
 /*
 Assignment name  : inter
 Expected files   : inter.c
@@ -33,3 +23,65 @@ nothig$
 $>./inter | cat -e
 $
 */
+
+#include <unistd.h>
+
+void	ft_putstr(char *s)
+{
+	while (*s)
+		write(1, s++, 1);
+}
+
+int	ft_strlen(char *s)
+{
+	int	len;
+
+	len = 0;
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+int	ft_strchr(char *s, int c)
+{
+	while(*s)
+		if (*s++ == c)
+			return (1);
+	return (0);
+}
+
+int	main(int argc, const char **argv)
+{
+	if (argc != 3)
+	{
+		write(1, "\n", 1);
+		return (0);
+	}
+	char	*s1;
+	char	*s2;
+	char	inter[ft_strlen((char *)argv[1]) + ft_strlen((char *)argv[2]) + 1];
+	int	i;
+	int	j;
+
+	s1 = (char *)argv[1];
+	s2 = (char *)argv[2];
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
+	{
+		if (ft_strchr(s2, s1[i]) && !(ft_strchr(inter, s1[i])))
+		{
+			inter[j] = s1[i];
+			j++;
+		}
+		i++;
+	}
+
+	inter[j] = '\0';
+	ft_putstr(inter);
+	write(1, "\n", 1);
+	return (0);
+}
