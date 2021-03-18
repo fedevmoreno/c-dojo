@@ -19,11 +19,13 @@ static void	ft_rotone(char *str)
 	{
 		if (ft_isalpha(str[i]))
 		{
-			if (str[i] == 90 || str[i] == 122)
+			if (str[i] == 'Z' || str[i] == 'z')
 				ft_putchar(str[i] - 25);
 			else
 				ft_putchar(str[i] + 1);
 		}
+		else
+			ft_putchar(str[i]);
 		i++;
 	}
 }
