@@ -12,7 +12,7 @@ static int	fd_isalpha(int c)
 
 static void	fd_rotoneortwo_decry(char *sp)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (sp[i] != '\0')
@@ -23,6 +23,8 @@ static void	fd_rotoneortwo_decry(char *sp)
 				fd_putchar(sp[i] + 24);
 			else if ((sp[i] == 'A' || sp[i] == 'a'))
 				fd_putchar(sp[i] + 24);
+/* 			else if ((sp[i] == 'C' || sp[i] == 'c'))
+				fd_putchar(sp[i] - 1); */
 			else
 				fd_putchar(sp[i] - 2);
 		}
