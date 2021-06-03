@@ -11,10 +11,11 @@
 **
 **	TO DO:
 **	
-**	1)	Choice a magic number you think is the middle of the list.
-**	2)	If n is lower or iquals to the magic number,
-**		then is stored in**	the left side,
-**		otherwise n is stored in the right side.
+**	1) Choice a magic number you think is the middle of the list.
+**	
+**	2) If n is lower or iquals to the magic number,
+**	then is stored in**	the left side,
+**	otherwise n is stored in the right side.
 */
 
 #include <stdio.h>
