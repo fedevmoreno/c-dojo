@@ -1,5 +1,3 @@
-/* 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh */
-
 #include <unistd.h>
 
 static void	ft_putchar(char c)
